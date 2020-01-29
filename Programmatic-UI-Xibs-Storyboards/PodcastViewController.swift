@@ -90,6 +90,7 @@ extension PodcastViewController: UICollectionViewDelegateFlowLayout {
         }
         podcastDetailController.podcast = podcast
         
+        // in the coming weekd or next week we will pad=ss data using dependency injection e.g PodcastDetailController(podcast)
         
         navigationController?.pushViewController(podcastDetailController, animated: true)
     }
