@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Podcast Detail Controller-->
+        <scene sceneID="TZi-jy-Xj1">
+            <objects>
+                <viewController storyboardIdentifier="PodcastDetailController" id="rB3-CJ-51T" customClass="PodcastDetailController" customModule="Programmatic_UI_Xibs_Storyboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7W-JR-w5a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wit-FV-dvV">
+                                <rect key="frame" x="0.0" y="43.5" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="hpF-HR-Zhg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAu-fE-PCi">
+                                <rect key="frame" x="20" y="452" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nNk-GM-0Ow" firstAttribute="trailing" secondItem="Wit-FV-dvV" secondAttribute="trailing" id="MWC-Vs-W3D"/>
+                            <constraint firstItem="Wit-FV-dvV" firstAttribute="leading" secondItem="nNk-GM-0Ow" secondAttribute="leading" id="Pxj-sF-c82"/>
+                            <constraint firstItem="Wit-FV-dvV" firstAttribute="top" secondItem="nNk-GM-0Ow" secondAttribute="top" id="ZgP-xA-gn9"/>
+                            <constraint firstItem="nNk-GM-0Ow" firstAttribute="trailing" secondItem="RAu-fE-PCi" secondAttribute="trailing" constant="20" id="drL-4l-hww"/>
+                            <constraint firstItem="RAu-fE-PCi" firstAttribute="top" secondItem="Wit-FV-dvV" secondAttribute="bottom" constant="8" id="kpC-RN-12Q"/>
+                            <constraint firstItem="RAu-fE-PCi" firstAttribute="leading" secondItem="nNk-GM-0Ow" secondAttribute="leading" constant="20" id="uJ9-CE-qcX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nNk-GM-0Ow"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="RAu-fE-PCi" id="ULQ-ht-FFR"/>
+                        <outlet property="imageView" destination="Wit-FV-dvV" id="h5h-Ts-t3f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgt-Wz-zeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-48.214285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="54" height="64"/>
+    </resources>
+</document>
