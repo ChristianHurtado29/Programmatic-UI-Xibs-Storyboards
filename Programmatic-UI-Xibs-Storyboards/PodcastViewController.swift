@@ -26,7 +26,7 @@ class PodcastViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .red
     navigationItem.title = "Podcasts"
-    
+    podcastView.collectionView.delegate = self
     podcastView.collectionView.dataSource = self
     podcastView.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "podcastCell")
     fetchPodcasts()
@@ -57,6 +57,10 @@ extension PodcastViewController: UICollectionViewDataSource {
   }
 }
 
-
-
-
+extension PodcastViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let maxSize: CGSize = UIScreen.main.bounds.size
+        let itemWidth: CGFloat = maxSize.width * 0.95 // 95% the width of the device
+        return CGSize(width: itemWidth, height: 120)
+    }
+}
